@@ -21,7 +21,7 @@ and the next, and the next until you find someone who has a golden
 or there is no one else to ask.
 
 Answer: Linear time O(n) for each person you have to ask, the time will incrementally
-increase until you solve the problem.
+increase until you solve the problem. execution time grows together with input time
 */
 
 /*
@@ -36,7 +36,7 @@ function isEven(value) {
         return false;
     }
 }
-/* ANSWER: That is constant time because no matter how large the value, 
+/* ANSWER: That is constant time O(1) because no matter how large the value, 
 it will take the same amount of time to solve */ 
 
 /*
@@ -53,7 +53,7 @@ function areYouHere(arr1, arr2) {
     }
     return false;
 }
-/* ANSWER: Because of the nested loop, this would be polynomial time.
+/* ANSWER: Because of the nested loop, this would be polynomial O(n^2) time.
 Two levels of looping over an input would be O(n^2) 
 */
 
@@ -99,6 +99,8 @@ function createPairs(arr) {
         }
     }
 }
+
+createPairs([])
 /* ANSWER: Because of the nested loop, this would be polynomial time.
 Two levels of looping over an input would be O(n^2) 
 */
@@ -124,8 +126,8 @@ function compute(num) {
     }
     return result;
 }
-/* ANSWER: This sequence is going to create an array that counts all the integers between 1 and the num.
-It is linear because the greater num is, the longer it will take to do.
+/* ANSWER: This sequence is going to create a fibonacci sequence (CORRECTION!)
+It is linear O(n) because the greater num is, the longer it will take to do.
 */
 
 /*
@@ -188,8 +190,8 @@ function isWhat(n) {
     return true;
 }
 /* This function determines if n is prime. 
-O(n) constant because it will take the same amount of time no matter
-what n is
+O(n) linear because the greater n is, the more times you will have to loop. 
+Execution time grows together with input time. 
 */
 
 function countingSheep(numOfSheep) {
